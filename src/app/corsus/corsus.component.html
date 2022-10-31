@@ -1,0 +1,22 @@
+<fieldset>
+<legend><h2>Cursus</h2></legend>
+<h3>Section bac : {{bac.SectionBac}}</h3>
+<h3>moyenne bac : {{bac.moyenne}}</h3>
+
+<div   *ngIf="bac.moyenne>=14 ; then Mention1 ; else Mention2 ">
+</div>
+<ng-template #Mention1> Moyenne honorable</ng-template>
+<ng-template #Mention2> Moyenne passable</ng-template>
+
+<h3>annee BAc : {{bac.anneeBac}}</h3>
+<div>
+    <h2>
+        Connaissances en IT
+    </h2>
+    <ol>
+        <li>{{connaissances[0]}}</li>
+        <li>{{connaissances[1]}}</li>
+        <li>{{connaissances[2]}}
+    </ol>
+</div>
+</fieldset>
